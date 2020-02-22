@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang ="pt-br">
+
+<head>
+    <meta charset ="utf-8">
+    <title>Determinante em Javacript</title>
+</head>
+
+<style>
+    body{
+        font-size: 20px;
+    }
+</style>
+
+<body>
+
+    <script>
+        var determinante 
+determinante = prompt("Digite a quantidade de colunas e linhas,como no exemplo: " + "\n" + "   Ex:   2x2, 3x3 e 4x4 ");
+
+switch(determinante)
+{
+    case "2x2":{
+        A = prompt("Digite o valor de A :");
+        B = prompt ("Digite o valor de B :");
+        C = prompt ("Digite o valor de C :");
+        D = prompt ("Digite o valor de D :");
+        determinante2x2 = [
+            [ ",[ " + A, B + " ]"] + "<br>",
+            [ "[ " + C, D + " ]"]
+        ]
+        d2x2= A*D -(C*B) 
+        document.write(" Determinante de 2x2: " + "<br>" + "<br>"+  determinante2x2 + "<br>" + "<br>"+ "S =  " + d2x2);
+        break 
+    }
+
+    case "3x3":{
+        A = prompt("Digite o valor de A :");
+        B = prompt ("Digite o valor de B :");
+        C = prompt ("Digite o valor de C :");
+        D = prompt ("Digite o valor de D :");
+        E = prompt ("Digite o valor de E :");
+        F = prompt ("Digite o valor de F :");
+        G = prompt ("Digite o valor de G :");
+        H = prompt ("Digite o valor de H :");
+        I = prompt ("Digite o valor de I :");
+        determinante3x3 = [
+            [ ",[ " + A, B, C + " ]"] + "<br>",
+            [ "[ " + D, E, F + " ]"] + "<br>",
+            [ "[ " + G, H, I + " ]"]
+        ]
+        d3x3= A*E*I + B*F*G + C*D*H -(G*E*C + H*F*A + I*D*B)
+        document.write("Determinate de 3x3: " + "<br>" + "<br>"+ determinante3x3 + "<br>" + "<br>"+ "S =  " + d3x3);
+        break 
+    } 
+    case "4x4":{
+        A = prompt ("Digite o valor de A :");
+        B = prompt ("Digite o valor de B :");
+        C = prompt ("Digite o valor de C :");
+        D = prompt ("Digite o valor de D :");
+        E = prompt ("Digite o valor de E :");
+        F = prompt ("Digite o valor de F :");
+        G = prompt ("Digite o valor de G :");
+        H = prompt ("Digite o valor de H :");
+        I = prompt ("Digite o valor de I :");
+        J = prompt ("Digite o valor de J :");
+        K = prompt ("Digite o valor de K :");
+        L = prompt ("Digite o valor de L :");
+        M = prompt ("Digite o valor de M :");
+        N = prompt ("Digite o valor de N :");
+        O = prompt ("Digite o valor de O :");
+        P = prompt ("Digite o valor de P :");
+        determinante4x4 = [
+            [ ",[ " + A, B, C, D + " ]"] + "<br>",
+            [ "[ " + E, F, G, H + " ]"] + "<br>",
+            [ "[ " + I, J, K, L + " ]"] + "<br>",
+            [ "[ " + M, N, O, P + " ]"]
+        ]
+        A11 = A*1*(F*K*P + G*L*N + H*J*O -(N*K*H + O*L*F + P*J*G))
+        A21 = E*-1*(B*K*P + C*L*N + D*J*O -(N*K*D + O*L*B + P*J*C))
+        A31 = I*1*(B*G*P + C*H*N + D*F*O -(N*G*D + O*H*B + P*F*C))
+        A41 = M*-1*(B*G*L + C*H*J + D*F*K -(J*G*D + K*H*B + L*F*C))
+        d4x4 = A11 + A21 + A31 + A41
+        document.write("Detreminante de 4x4: " + "<br>" + "<br>"+ determinante4x4 + "<br>" + "<br>" + "S =  " + d4x4 );
+        break 
+    }
+        default: 
+        alert("O sistema só reconhce uma determinante de até 4x4 e não reconhece se tiver com CapsLook ou não estiver como no exemplo");
+        break    
+}
+    
+    
+    </script>
+
+</body>
+
+<html>
